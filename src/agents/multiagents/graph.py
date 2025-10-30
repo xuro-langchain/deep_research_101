@@ -12,15 +12,15 @@ from langgraph.graph import MessagesState
 from langgraph.types import Command, Send
 from langgraph.graph import START, END, StateGraph
 
-from legacy.configuration import MultiAgentConfiguration
-from legacy.utils import (
+from agents.multiagents.configuration import MultiAgentConfiguration
+from agents.multiagents.utils import (
     get_config_value,
     tavily_search,
     duckduckgo_search,
     get_today_str,
 )
 
-from legacy.prompts import SUPERVISOR_INSTRUCTIONS, RESEARCH_INSTRUCTIONS
+from agents.multiagents.prompts import SUPERVISOR_INSTRUCTIONS, RESEARCH_INSTRUCTIONS
 
 ## Tools factory - will be initialized based on configuration
 def get_search_tool(config: RunnableConfig):

@@ -1,7 +1,9 @@
 {
     "dockerfile_lines": [],
     "graphs": {
-      "Deep Researcher": "./src/open_deep_research/deep_researcher.py:deep_researcher"
+      "Optimized Researcher": "./src/agents/optimized/graph.py:graph",
+      "Parallel Researcher": "./src/agents/parallel/graph.py:graph",
+      "Multi-Agent Researcher": "./src/agents/multiagents/graph.py:graph"
     },
     "python_version": "3.11",
     "env": "./.env",

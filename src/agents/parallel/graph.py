@@ -8,7 +8,7 @@ from langgraph.constants import Send
 from langgraph.graph import START, END, StateGraph
 from langgraph.types import interrupt, Command
 
-from legacy.state import (
+from agents.parallel.state import (
     ReportStateInput,
     ReportStateOutput,
     Sections,
@@ -19,7 +19,7 @@ from legacy.state import (
     Feedback
 )
 
-from legacy.prompts import (
+from agents.parallel.prompts import (
     report_planner_query_writer_instructions,
     report_planner_instructions,
     query_writer_instructions, 
@@ -29,8 +29,8 @@ from legacy.prompts import (
     section_writer_inputs
 )
 
-from legacy.configuration import Configuration
-from legacy.utils import (
+from agents.parallel.configuration import Configuration
+from agents.parallel.utils import (
     format_sections, 
     get_config_value, 
     get_search_params, 

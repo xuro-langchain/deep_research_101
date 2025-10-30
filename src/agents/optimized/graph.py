@@ -16,10 +16,10 @@ from langchain_core.runnables import RunnableConfig
 from langgraph.graph import END, START, StateGraph
 from langgraph.types import Command
 
-from open_deep_research.configuration import (
+from agents.optimized.configuration import (
     Configuration,
 )
-from open_deep_research.prompts import (
+from agents.optimized.prompts import (
     clarify_with_user_instructions,
     compress_research_simple_human_message,
     compress_research_system_prompt,
@@ -28,7 +28,7 @@ from open_deep_research.prompts import (
     research_system_prompt,
     transform_messages_into_research_topic_prompt,
 )
-from open_deep_research.state import (
+from agents.optimized.state import (
     AgentInputState,
     AgentState,
     ClarifyWithUser,
@@ -39,7 +39,7 @@ from open_deep_research.state import (
     ResearchQuestion,
     SupervisorState,
 )
-from open_deep_research.utils import (
+from agents.optimized.utils import (
     anthropic_websearch_called,
     get_all_tools,
     get_api_key_for_model,
@@ -716,4 +716,4 @@ deep_researcher_builder.add_edge("research_supervisor", "final_report_generation
 deep_researcher_builder.add_edge("final_report_generation", END)                   # Final exit point
 
 # Compile the complete deep researcher workflow
-deep_researcher = deep_researcher_builder.compile()
+graph = deep_researcher_builder.compile()

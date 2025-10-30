@@ -6,18 +6,6 @@ Deep research has broken out as one of the most popular agent applications. This
 
 <img width="817" height="666" alt="Screenshot 2025-07-13 at 11 21 12 PM" src="https://github.com/user-attachments/assets/052f2ed3-c664-4a4f-8ec2-074349dcaa3f" />
 
-### 🔥 Recent Updates
-
-**August 14, 2025**: See our free course [here](https://academy.langchain.com/courses/deep-research-with-langgraph) (and course repo [here](https://github.com/langchain-ai/deep_research_from_scratch)) on building open deep research.
-
-**August 7, 2025**: Added GPT-5 and updated the Deep Research Bench evaluation w/ GPT-5 results.
-
-**August 2, 2025**: Achieved #6 ranking on the [Deep Research Bench Leaderboard](https://huggingface.co/spaces/Ayanami0730/DeepResearch-Leaderboard) with an overall score of 0.4344. 
-
-**July 30, 2025**: Read about the evolution from our original implementations to the current version in our [blog post](https://rlancemartin.github.io/2025/07/30/bitter_lesson/).
-
-**July 16, 2025**: Read more in our [blog](https://blog.langchain.com/open-deep-research/) and watch our [video](https://www.youtube.com/watch?v=agGiWUpxkhg) for a quick overview.
-
 ### 🚀 Quickstart
 
 1. Clone the repository and activate a virtual environment:
@@ -121,29 +109,3 @@ Follow the [quickstart](#-quickstart) to start LangGraph server locally and test
 #### Hosted deployment
  
 You can easily deploy to [LangGraph Platform](https://langchain-ai.github.io/langgraph/concepts/#deployment-options). 
-
-#### Open Agent Platform
-
-Open Agent Platform (OAP) is a UI from which non-technical users can build and configure their own agents. OAP is great for allowing users to configure the Deep Researcher with different MCP tools and search APIs that are best suited to their needs and the problems that they want to solve.
-
-We've deployed Open Deep Research to our public demo instance of OAP. All you need to do is add your API Keys, and you can test out the Deep Researcher for yourself! Try it out [here](https://oap.langchain.com)
-
-You can also deploy your own instance of OAP, and make your own custom agents (like Deep Researcher) available on it to your users.
-1. [Deploy Open Agent Platform](https://docs.oap.langchain.com/quickstart)
-2. [Add Deep Researcher to OAP](https://docs.oap.langchain.com/setup/agents)
-
-### Legacy Implementations 🏛️
-
-The `src/legacy/` folder contains two earlier implementations that provide alternative approaches to automated research. They are less performant than the current implementation, but provide alternative ideas understanding the different approaches to deep research.
-
-#### 1. Workflow Implementation (`legacy/graph.py`)
-- **Plan-and-Execute**: Structured workflow with human-in-the-loop planning
-- **Sequential Processing**: Creates sections one by one with reflection
-- **Interactive Control**: Allows feedback and approval of report plans
-- **Quality Focused**: Emphasizes accuracy through iterative refinement
-
-#### 2. Multi-Agent Implementation (`legacy/multi_agent.py`)  
-- **Supervisor-Researcher Architecture**: Coordinated multi-agent system
-- **Parallel Processing**: Multiple researchers work simultaneously
-- **Speed Optimized**: Faster report generation through concurrency
-- **MCP Support**: Extensive Model Context Protocol integration
