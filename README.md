@@ -45,11 +45,42 @@ This will open the LangGraph Studio UI in your browser.
 
 Ask a question in the `messages` input field and click `Submit`. Select different configuration in the "Manage Assistants" tab.
 
+### Notebooks 📚 
+1. Clone the repository and activate a virtual environment:
+```bash
+git clone https://github.com/langchain-ai/open_deep_research.git
+cd open_deep_research
+uv venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+```
+
+2. Install dependencies:
+```bash
+uv sync
+# or
+uv pip install -r pyproject.toml
+```
+
+3. Set up your `.env` file to customize the environment variables (for model selection, search tools, and other configuration settings):
+```bash
+cp .env.example .env
+```
+
+4. Open the notebooks in the ```src/notebooks``` directory to follow along the implementation of each iteration of deep research.
+```bash
+jupyter notebook
+```
+
+The first iteration of deep research is contained in the ```parallel.ipynb``` notebook, the second is contained in the ```multiagents.ipynb``` notebook, and the final optimized version is in ```optimized.ipynb```.
+
+
 ### ⚙️ Configurations
 
 #### LLM :brain:
 
 Open Deep Research supports a wide range of LLM providers via the [init_chat_model() API](https://python.langchain.com/docs/how_to/chat_models_universal_init/). It uses LLMs for a few different tasks. See the below model fields in the [configuration.py](https://github.com/langchain-ai/open_deep_research/blob/main/src/open_deep_research/configuration.py) file for more details. This can be accessed via the LangGraph Studio UI. 
+
+> Note: The below configuration is for the final, optimized agent. For the multiagent and parallel iterations of the agent, the specific subtasks are different. However, all versions use gpt-4.1.mini by default.
 
 - **Summarization** (default: `openai:gpt-4.1-mini`): Summarizes search API results
 - **Research** (default: `openai:gpt-4.1`): Power the search agent
