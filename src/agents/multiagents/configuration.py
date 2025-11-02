@@ -42,8 +42,8 @@ class MultiAgentConfiguration:
     
     # Multi-agent specific configuration
     number_of_queries: int = 2 # Number of search queries to generate per section
-    supervisor_model: str = "anthropic:claude-sonnet-4-20250514"
-    researcher_model: str = "anthropic:claude-sonnet-4-20250514"
+    supervisor_model: str = "openai:gpt-4.1-mini"
+    researcher_model: str = "openai:gpt-4.1-mini"
     ask_for_clarification: bool = False # Whether to ask for clarification from the user
     # MCP server configuration
     mcp_server_config: Optional[Dict[str, Any]] = None
