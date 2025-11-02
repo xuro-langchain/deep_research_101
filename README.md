@@ -10,7 +10,7 @@ Deep research has broken out as one of the most popular agent applications. This
 
 1. Clone the repository and activate a virtual environment:
 ```bash
-git clone https://github.com/langchain-ai/open_deep_research.git
+git clone https://github.com/xuro-langchain/deep_research_101
 cd open_deep_research
 uv venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
@@ -48,7 +48,7 @@ Ask a question in the `messages` input field and click `Submit`. Select differen
 ### Notebooks 📚 
 1. Clone the repository and activate a virtual environment:
 ```bash
-git clone https://github.com/langchain-ai/open_deep_research.git
+git clone https://github.com/xuro-langchain/deep_research_101
 cd open_deep_research
 uv venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
