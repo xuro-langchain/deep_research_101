@@ -38,7 +38,7 @@ class Configuration:
     process_search_results: Literal["summarize", "split_and_rerank"] | None = None
     summarization_model_provider: str = "openai"
     summarization_model: str = "gpt-4.1"
-    max_structured_output_retries: int = 3
+    max_structured_output_retries: int = 2
     include_source_str: bool = False
     
     # Workflow-specific configuration

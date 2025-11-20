@@ -43,6 +43,7 @@ dependencies = [
     "mcp>=1.19.0",
     "langchain-aws>=1.0.0",
     "pandas>=2.3.1",
+    "jupyter>=1.1.1",
 ]
 
 [project.optional-dependencies]
